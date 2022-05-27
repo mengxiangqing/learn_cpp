@@ -1,0 +1,35 @@
+//
+// Created by 蒙西昂请 on 2022/5/23.
+//
+
+#ifndef CLION_NAMESP_H
+#define CLION_NAMESP_H
+
+#include<string>
+
+namespace pers {
+    struct Person {
+        std::string fname;
+        std::string lname;
+    };
+
+    void getPerson(Person &);
+
+    void showPerson(const Person &);
+}
+
+namespace debts {
+    using namespace pers;
+    struct Debt{
+        Person name;
+        double amount;
+    };
+    void getDebt(Debt &);
+
+    void showDebt(const Debt &);
+
+    double sumDebts(const Debt ar[], int n);
+}
+
+
+#endif //CLION_NAMESP_H
